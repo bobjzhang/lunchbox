@@ -23,7 +23,7 @@ Set-up
 
 Alternative
 ================================
-* Go to https://remix.ethereum.org/ and load the contract currently deployed to `0x31334ea528a9dfd041ac94962e029636cb5b1b64`
+* Go to https://remix.ethereum.org/ and load the contract currently deployed to `0x85530a567ed0b61925695983c22df9bf6b570bdb`
 * This should give you access to the full code for Lunchbox
 
 What I didn't get around to doing
