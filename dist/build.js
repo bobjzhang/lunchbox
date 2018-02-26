@@ -19289,6 +19289,8 @@ var _initializeWeb = __webpack_require__(282);
 
 var _initializeWeb2 = _interopRequireDefault(_initializeWeb);
 
+var _solidityConstants = __webpack_require__(283);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -19296,9 +19298,6 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-var contractAddress = '0x9959cf25f0508cf581ab0a9a08a0965c02b850e9';
-var ABIInterface = [{ "constant": true, "inputs": [], "name": "maxEntities", "outputs": [{ "name": "", "type": "uint256" }], "payable": false, "stateMutability": "view", "type": "function" }, { "constant": true, "inputs": [], "name": "minPayment", "outputs": [{ "name": "", "type": "uint256" }], "payable": false, "stateMutability": "view", "type": "function" }, { "constant": false, "inputs": [], "name": "kill", "outputs": [], "payable": false, "stateMutability": "nonpayable", "type": "function" }, { "constant": false, "inputs": [{ "name": "isGuilty", "type": "bool" }], "name": "carryOutVerdict", "outputs": [], "payable": false, "stateMutability": "nonpayable", "type": "function" }, { "constant": true, "inputs": [], "name": "totalPayout", "outputs": [{ "name": "", "type": "uint256" }], "payable": false, "stateMutability": "view", "type": "function" }, { "constant": false, "inputs": [{ "name": "entity", "type": "address" }], "name": "hasJuryDuty", "outputs": [{ "name": "", "type": "bool" }], "payable": false, "stateMutability": "nonpayable", "type": "function" }, { "constant": true, "inputs": [{ "name": "", "type": "uint256" }], "name": "entitiesAddrs", "outputs": [{ "name": "", "type": "address" }], "payable": false, "stateMutability": "view", "type": "function" }, { "constant": false, "inputs": [], "name": "cleanContract", "outputs": [], "payable": true, "stateMutability": "payable", "type": "function" }, { "constant": false, "inputs": [{ "name": "isGuilty", "type": "bool" }], "name": "makeDecision", "outputs": [], "payable": true, "stateMutability": "payable", "type": "function" }, { "constant": true, "inputs": [], "name": "numDecisions", "outputs": [{ "name": "", "type": "uint256" }], "payable": false, "stateMutability": "view", "type": "function" }, { "inputs": [], "payable": true, "stateMutability": "payable", "type": "constructor" }, { "payable": true, "stateMutability": "payable", "type": "fallback" }];
 
 var App = function (_React$Component) {
    _inherits(App, _React$Component);
@@ -19331,8 +19330,8 @@ var App = function (_React$Component) {
    _createClass(App, [{
       key: 'instantiateContract',
       value: function instantiateContract() {
-         var MyContract = this.state.web3.eth.contract(ABIInterface);
-         this.state.ContractInstance = MyContract.at(contractAddress);
+         var MyContract = this.state.web3.eth.contract(_solidityConstants.ABIInterface);
+         this.state.ContractInstance = MyContract.at(_solidityConstants.contractAddress);
       }
    }, {
       key: 'updateState',
@@ -41184,6 +41183,138 @@ var initializeWeb3 = new Promise(function (resolve, reject) {
 });
 
 exports.default = initializeWeb3;
+
+/***/ }),
+/* 283 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+	value: true
+});
+var contractAddress = exports.contractAddress = '0x85530a567ed0b61925695983c22df9bf6b570bdb';
+var ABIInterface = exports.ABIInterface = [{
+	"constant": true,
+	"inputs": [{
+		"name": "",
+		"type": "uint256"
+	}],
+	"name": "entitiesAddrs",
+	"outputs": [{
+		"name": "",
+		"type": "address"
+	}],
+	"payable": false,
+	"stateMutability": "view",
+	"type": "function"
+}, {
+	"constant": true,
+	"inputs": [],
+	"name": "minPayment",
+	"outputs": [{
+		"name": "",
+		"type": "uint256"
+	}],
+	"payable": false,
+	"stateMutability": "view",
+	"type": "function"
+}, {
+	"constant": true,
+	"inputs": [],
+	"name": "totalPayout",
+	"outputs": [{
+		"name": "",
+		"type": "uint256"
+	}],
+	"payable": false,
+	"stateMutability": "view",
+	"type": "function"
+}, {
+	"constant": true,
+	"inputs": [],
+	"name": "numDecisions",
+	"outputs": [{
+		"name": "",
+		"type": "uint256"
+	}],
+	"payable": false,
+	"stateMutability": "view",
+	"type": "function"
+}, {
+	"constant": true,
+	"inputs": [],
+	"name": "maxEntities",
+	"outputs": [{
+		"name": "",
+		"type": "uint256"
+	}],
+	"payable": false,
+	"stateMutability": "view",
+	"type": "function"
+}, {
+	"constant": false,
+	"inputs": [{
+		"name": "isGuilty",
+		"type": "bool"
+	}],
+	"name": "carryOutVerdict",
+	"outputs": [],
+	"payable": false,
+	"stateMutability": "nonpayable",
+	"type": "function"
+}, {
+	"constant": false,
+	"inputs": [],
+	"name": "cleanContract",
+	"outputs": [],
+	"payable": true,
+	"stateMutability": "payable",
+	"type": "function"
+}, {
+	"constant": false,
+	"inputs": [{
+		"name": "entity",
+		"type": "address"
+	}],
+	"name": "hasJuryDuty",
+	"outputs": [{
+		"name": "",
+		"type": "bool"
+	}],
+	"payable": false,
+	"stateMutability": "nonpayable",
+	"type": "function"
+}, {
+	"constant": false,
+	"inputs": [],
+	"name": "kill",
+	"outputs": [],
+	"payable": false,
+	"stateMutability": "nonpayable",
+	"type": "function"
+}, {
+	"constant": false,
+	"inputs": [{
+		"name": "isGuilty",
+		"type": "bool"
+	}],
+	"name": "makeDecision",
+	"outputs": [],
+	"payable": true,
+	"stateMutability": "payable",
+	"type": "function"
+}, {
+	"payable": true,
+	"stateMutability": "payable",
+	"type": "fallback"
+}, {
+	"inputs": [],
+	"payable": true,
+	"stateMutability": "payable",
+	"type": "constructor"
+}];
 
 /***/ })
 /******/ ]);
