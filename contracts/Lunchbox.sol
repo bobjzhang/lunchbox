@@ -2,7 +2,7 @@ pragma solidity ^0.4.19;
 
 contract Lunchbox {
   address judge;
-  bool private truth = false; // Guilty or not
+  bool internal truth = false; // Guilty or not
   uint public minPayment = 100 finney;
   uint public totalPayout;
   uint public maxEntities = 3;
@@ -15,7 +15,7 @@ contract Lunchbox {
   }
 
   // Addresses to be paid out to after verdict is reached
-  address[] private payoutAddrs;
+  address[] internal payoutAddrs;
 
   // Addresses of every person part of the jury
   address[] public entitiesAddrs;
@@ -44,7 +44,7 @@ contract Lunchbox {
 
   // Determine if an entity needs to be added to the jury. 
   // If they are return false otherwise true.
-  function hasJuryDuty(address entity) public returns(bool) {
+  function hasJuryDuty(address entity) public view returns(bool) {
     for(uint i = 0; i < entitiesAddrs.length; i++) { 
       if (entitiesAddrs[i] == entity) return false;
     }
