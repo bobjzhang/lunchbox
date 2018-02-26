@@ -1,4 +1,4 @@
-export const contractAddress = '0x85530a567ed0b61925695983c22df9bf6b570bdb';
+export const contractAddress = '0x052b04096127c19f498f4234d172b97b103e1cdc';
 export const ABIInterface = [
 	{
 		"constant": true,
@@ -21,12 +21,17 @@ export const ABIInterface = [
 	},
 	{
 		"constant": true,
-		"inputs": [],
-		"name": "minPayment",
+		"inputs": [
+			{
+				"name": "entity",
+				"type": "address"
+			}
+		],
+		"name": "hasJuryDuty",
 		"outputs": [
 			{
 				"name": "",
-				"type": "uint256"
+				"type": "bool"
 			}
 		],
 		"payable": false,
@@ -51,6 +56,20 @@ export const ABIInterface = [
 		"constant": true,
 		"inputs": [],
 		"name": "numDecisions",
+		"outputs": [
+			{
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [],
+		"name": "minPayment",
 		"outputs": [
 			{
 				"name": "",
@@ -99,23 +118,10 @@ export const ABIInterface = [
 		"type": "function"
 	},
 	{
-		"constant": false,
-		"inputs": [
-			{
-				"name": "entity",
-				"type": "address"
-			}
-		],
-		"name": "hasJuryDuty",
-		"outputs": [
-			{
-				"name": "",
-				"type": "bool"
-			}
-		],
-		"payable": false,
-		"stateMutability": "nonpayable",
-		"type": "function"
+		"inputs": [],
+		"payable": true,
+		"stateMutability": "payable",
+		"type": "constructor"
 	},
 	{
 		"constant": false,
@@ -144,11 +150,5 @@ export const ABIInterface = [
 		"payable": true,
 		"stateMutability": "payable",
 		"type": "fallback"
-	},
-	{
-		"inputs": [],
-		"payable": true,
-		"stateMutability": "payable",
-		"type": "constructor"
 	}
 ];

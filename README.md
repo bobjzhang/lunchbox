@@ -1,4 +1,4 @@
-# lunchbox
+# MockTrial
 
 Description
 ================================
@@ -15,16 +15,16 @@ Set-up
 * Enable metamask chrome plugin and switch to `Ropsten Test Net`
 * Get some fake ether at https://faucet.metamask.io/ to play with
 * Clone the repo
-* Run `yarn` in root directory of Lunchbox
-* Run `./node_modules/webpack/bin/webpack.js` in root directory of Lunchbox to build the React and css
+* Run `yarn` in root directory of MockTrial
+* Run `./node_modules/webpack/bin/webpack.js` in root directory of MockTrial to build the React and css
 * Run `./node_modules/webpack/bin/http-server` 
 * Go to `localhost:8080/dist` to see the app loaded
 * You are now ready to place your verdict
 
 Alternative
 ================================
-* Go to https://remix.ethereum.org/ and load the contract currently deployed to `0x85530a567ed0b61925695983c22df9bf6b570bdb`
-* This should give you access to the full code for Lunchbox
+* Go to https://remix.ethereum.org/ and load the contract currently deployed to `0x052b04096127c19f498f4234d172b97b103e1cdc`
+* This should give you access to the full code for MockTrial
 
 What I didn't get around to doing
 =================================
