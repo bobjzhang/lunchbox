@@ -1,6 +1,6 @@
 pragma solidity ^0.4.19;
 
-contract Lunchbox {
+contract MockTrial {
   address judge;
   bool private truth = false; // Guilty or not
   uint public minPayment = 100 finney;
@@ -27,7 +27,7 @@ contract Lunchbox {
     }
   }
 
-  function Lunchbox() payable public {
+  function MockTrial() payable public {
      judge = msg.sender;
      // Innocent until proven guilty
      truth = msg.value > 0 ? true : false;
@@ -44,7 +44,7 @@ contract Lunchbox {
 
   // Determine if an entity needs to be added to the jury. 
   // If they are return false otherwise true.
-  function hasJuryDuty(address entity) public returns(bool) {
+  function hasJuryDuty(address entity) public view returns(bool) {
     for(uint i = 0; i < entitiesAddrs.length; i++) { 
       if (entitiesAddrs[i] == entity) return false;
     }
